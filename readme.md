@@ -7,6 +7,7 @@ cordova plugin add cordova-plugin-geolocation
 cordova plugin add cordova-plugin-vibration
 cordova plugin add cordova-plugin-device-motion
 cordova plugin add https://github.com/phonegap/phonegap-plugin-barcodescanner.git
+cordova plugin add https://github.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin.git
 
 ### Supported Platforms
 

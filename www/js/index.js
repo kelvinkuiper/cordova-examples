@@ -5,6 +5,7 @@ function onDeviceReady() {
     var vibrate_button = document.querySelector('.vibrate-button');
     var qrcode_button = document.querySelector('.qr-code-button');
     var location_button = document.querySelector('.location-button');
+    var flashlight_button = document.querySelector('.flashlight-button');
 
     var accelerometer_container = document.querySelector('.accelerations');
     var accelerometer_button = document.querySelector('.accelerometer-button');
@@ -55,6 +56,22 @@ function onDeviceReady() {
           		  'message: ' + error.message + '\n');
     	});
 
+    });
+
+
+    //Flashlight
+    var flashlight_active = false;
+    flashlight_button.addEventListener('click', function() {
+    	if(!flashlight_active) {
+    		flashlight_active = true;
+    		flashlight_button.style.fontWeight = 'bold';
+    		window.plugins.flashlight.switchOn();
+    	}
+    	else {
+    		flashlight_active = false;
+    		flashlight_button.style.fontWeight = 'normal';
+    		window.plugins.flashlight.switchOff()
+    	}
     });
 
     //Variable to store the acceleration watcher
